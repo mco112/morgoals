@@ -12,11 +12,17 @@ A lightweight Python script that checks for NHL players who were 40+ goal scorer
 
 ## Running the check
 
+### macOS quickstart
+
 ```bash
+# 1) Make sure you have Python 3 installed (macOS 12+ ships with it, or use Homebrew: brew install python)
+# 2) From the repo root, create and activate a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# 3) Install dependencies and run the script
 pip install -r requirements.txt
 python nhl_due.py
 ```
 
-The script prints a formatted table of “past due” scorers with games today, or a message if no players meet the criteria.
-
-You can schedule this command to run daily (e.g., with `cron`) to keep the list up to date.
+The script prints a formatted table of “past due” scorers with games today, or a message if no players meet the criteria. You can schedule the command to run daily with `cron`, macOS Calendar alerts that run scripts, or a GitHub Action if you prefer to offload execution from your Mac.
